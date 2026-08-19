@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Submit your playing — Practice Desk</title>
+<meta name="description" content="Submit your cello recording for a personalised Practice Desk review.">
+
+<style>
+:root{
+  --ink:#202020;
+  --paper:#f8f5ef;
+  --white:#fff;
+  --sand:#b59a74;
+  --muted:#68645e;
+  --line:#ddd5ca;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.55;
+}
+
+a{color:inherit}
+
+.wrap{
+  width:min(760px,90%);
+  margin:auto;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.brand{
+  font-size:18px;
+  letter-spacing:.18em;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.back{
+  font-size:14px;
+  text-decoration:none;
+  color:var(--muted);
+}
+
+.hero{
+  padding:56px 0 48px;
+}
+
+.eyebrow{
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:12px;
+  color:var(--sand);
+  font-weight:700;
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(46px,9vw,72px);
+  line-height:1.05;
+  margin:14px 0 22px;
+}
+
+.intro{
+  font-size:19px;
+  color:var(--muted);
+  max-width:650px;
+}
+
+.info{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:24px 0;
+  margin-bottom:44px;
+}
+
+.info strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+form{
+  padding-bottom:80px;
+}
+
+.field{
+  margin-bottom:28px;
+}
+
+label{
+  display:block;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.hint{
+  display:block;
+  color:var(--muted);
+  font-size:14px;
+  margin:0 0 10px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  padding:15px 16px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  color:var(--ink);
+  font:inherit;
+  font-size:16px;
+}
+
+textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.check{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:34px 0;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.check input{
+  width:auto;
+  margin-top:5px;
+}
+
+.summary{
+  background:var(--ink);
+  color:#fff;
+  padding:30px;
+  border-radius:20px;
+  margin:36px 0 24px;
+}
+
+.summary .price{
+  font-family:Georgia,serif;
+  font-size:52px;
+  line-height:1;
+  margin:8px 0 12px;
+}
+
+.summary p{
+  margin:6px 0;
+  color:#e1ddd7;
+}
+
+button{
+  width:100%;
+  border:0;
+  border-radius:999px;
+  padding:17px 22px;
+  background:var(--ink);
+  color:#fff;
+  font:inherit;
+  font-weight:700;
+  font-size:17px;
+  cursor:pointer;
+}
+
+button:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+}
+
+.status{
+  margin-top:14px;
+  font-size:14px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:28px 0 40px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+@media(max-width:720px){
+  .hero{padding:42px 0 38px}
+  .summary{padding:26px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="wrap nav">
+  <a class="brand" href="index.html">PRACTICE DESK</a>
+  <a class="back" href="index.html">← Back</a>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+  <div class="eyebrow">Introductory review · £39</div>
+  <h1>Submit your playing.</h1>
+  <p class="intro">
+    Tell us a little about your playing and send a link to your recording.
+    You’ll complete payment as the final step.
+  </p>
+</section>
+
+<div class="info">
+  <strong>Your recording</strong>
+  Up to 10 minutes of cello playing. You can use an unlisted YouTube link,
+  Google Drive, Dropbox or another private link that we can access.
+</div>
+
+<form id="practiceForm" action="https://formspree.io/f/xkjwkjzj" method="POST">
+
+  <div class="field">
+    <label for="name">Your name</label>
+    <input id="name" name="name" type="text" autocomplete="name" required>
+  </div>
+
+  <div class="field">
+    <label for="email">Email address</label>
+    <span class="hint">We’ll use this
