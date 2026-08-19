@@ -1,196 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Practice Desk — Expert cello feedback</title>
-<meta name="description" content="Submit your cello playing and receive a personalised professional written review and practice plan.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Submit your playing — Practice Desk</title>
+<meta name="description" content="Submit your cello recording for a personalised Practice Desk review.">
 <style>
 :root{--ink:#202020;--paper:#f8f5ef;--white:#fff;--sand:#b59a74;--muted:#68645e;--line:#ddd5ca}
-*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55} a{color:inherit}.wrap{width:min(1080px,90%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.brand{font-size:18px;letter-spacing:.18em;font-weight:600}.nav a{text-decoration:none;font-size:14px}.hero{padding:78px 0 86px;text-align:center}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--sand);font-weight:700}.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(48px,9vw,88px);line-height:1;margin:18px 0}.hero p{font-size:clamp(18px,3vw,24px);max-width:660px;margin:0 auto 30px;color:var(--muted)}.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:15px 24px;border-radius:999px;font-weight:700}.sub{font-size:13px;color:var(--muted);margin-top:13px}.section{padding:72px 0;border-top:1px solid var(--line)}h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(34px,6vw,54px);margin:0 0 24px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:rgba(255,255,255,.55);border:1px solid var(--line);padding:28px;border-radius:18px}.num{font-family:Georgia,serif;font-size:32px;color:var(--sand)}.card h3{margin:8px 0}.two{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:start}.checks{list-style:none;padding:0;margin:0}.checks li{padding:13px 0;border-bottom:1px solid var(--line)}.checks li:before{content:'✓';color:var(--sand);font-weight:bold;margin-right:10px}.price{background:var(--ink);color:#fff;padding:38px;border-radius:22px}.price .amount{font-family:Georgia,serif;font-size:64px;line-height:1}.price small{color:#d8d3cb}.quote{font-family:Georgia,serif;font-size:28px;max-width:760px}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{font-weight:700;cursor:pointer}.cta{text-align:center;padding:88px 0}.footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:13px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:12px;margin:3px}.logo{width:92px;height:92px;border-radius:50%;object-fit:cover;margin-bottom:16px}
-@media(max-width:720px){.grid3,.two{grid-template-columns:1fr}.hero{padding:52px 0 64px}.section{padding:54px 0}.nav .links{display:none}.two{gap:28px}.price .amount{font-size:54px}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit}.wrap{width:min(760px,90%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.brand{font-size:18px;letter-spacing:.18em;font-weight:600;text-decoration:none}.back{font-size:14px;text-decoration:none;color:var(--muted)}.hero{padding:56px 0 48px}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--sand);font-weight:700}h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(46px,9vw,72px);line-height:1.05;margin:14px 0 22px}.intro{font-size:19px;color:var(--muted);max-width:650px}.info{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;margin-bottom:44px}.info strong{display:block;margin-bottom:5px}form{padding-bottom:80px}.field{margin-bottom:28px}label{display:block;font-weight:700;margin-bottom:8px}.hint{display:block;color:var(--muted);font-size:14px;margin:0 0 10px}input,textarea{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:inherit;font-size:16px}textarea{min-height:130px;resize:vertical}.check{display:flex;gap:10px;align-items:flex-start;margin:34px 0;font-size:14px;color:var(--muted)}.check input{width:auto;margin-top:5px}.summary{background:var(--ink);color:#fff;padding:30px;border-radius:20px;margin:36px 0 24px}.summary .price{font-family:Georgia,serif;font-size:52px;line-height:1;margin:8px 0 12px}.summary p{margin:6px 0;color:#e1ddd7}button{width:100%;border:0;border-radius:999px;padding:17px 22px;background:var(--ink);color:#fff;font:inherit;font-weight:700;font-size:17px;cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}.status{margin-top:14px;font-size:14px;text-align:center;color:var(--muted)}.footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:13px}@media(max-width:720px){.hero{padding:42px 0 38px}.summary{padding:26px}}
 </style>
 </head>
-
 <body>
-
-<header class="wrap nav">
-<div class="brand">PRACTICE DESK</div>
-<div class="links">
-<a href="#how">How it works</a> &nbsp;&nbsp;
-<a href="#report">The report</a> &nbsp;&nbsp;
-<a href="#faq">FAQ</a>
-</div>
-</header>
-
-<main>
-
-<section class="hero wrap">
-<img src="logo.png" class="logo" alt="Practice Desk logo">
-<div class="eyebrow">Professional cello feedback, online</div>
-<h1>Practise with direction.</h1>
-<p>Send your playing. Receive expert written feedback, clear priorities and a personalised plan for what to practise next.</p>
-<a class="btn" href="submit.html">Submit your playing</a>
-<div class="sub">Introductory review · £39</div>
-</section>
-
-<section class="section" id="how">
-<div class="wrap">
-<div class="eyebrow">How it works</div>
-<h2>Three simple steps.</h2>
-
-<div class="grid3">
-
-<div class="card">
-<div class="num">01</div>
-<h3>Record</h3>
-<p>Record up to 10 minutes of your cello playing on your phone or camera.</p>
-</div>
-
-<div class="card">
-<div class="num">02</div>
-<h3>Submit</h3>
-<p>Send your video and tell Practice Desk what you’re working on or worried about.</p>
-</div>
-
-<div class="card">
-<div class="num">03</div>
-<h3>Receive</h3>
-<p>Get a personalised written Practice Report with feedback and practical next steps.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="section" id="report">
-<div class="wrap two">
-
-<div>
-<div class="eyebrow">Your Practice Report</div>
-<h2>Not just comments. A plan.</h2>
-<p class="quote">Know what is working, what needs attention, and exactly where to put your practice time next.</p>
-<p>Every review is tailored to the recording you submit. Feedback focuses on the areas most relevant to your playing rather than forcing every performance through the same checklist.</p>
-</div>
-
-<ul class="checks">
-<li>Overall performance assessment</li>
-<li>Technique, sound and intonation feedback</li>
-<li>Musical and stylistic observations</li>
-<li>3–5 prioritised areas to work on</li>
-<li>Specific practice suggestions and exercises</li>
-<li>A personalised practice plan</li>
-<li>Clear goals for your next recording</li>
-</ul>
-
-</div>
-</section>
-
-<section class="section">
-<div class="wrap">
-<div class="eyebrow">Who it’s for</div>
-<h2>A second pair of expert ears.</h2>
-
-<p style="max-width:720px">
-Practice Desk is designed for cellists who want focused, independent feedback — whether you’re learning for enjoyment, returning to the instrument, working towards an exam or performance, or simply wondering what to focus on next.
-</p>
-
-<div>
-<span class="pill">All levels welcome</span>
-<span class="pill">Returning cellists</span>
-<span class="pill">Exam &amp; performance prep</span>
-<span class="pill">Independent learners</span>
-<span class="pill">A fresh perspective</span>
-</div>
-
-</div>
-</section>
-
-<section class="section" id="price">
-<div class="wrap two">
-
-<div>
-<div class="eyebrow">Launch offer</div>
-<h2>Cello Performance Review</h2>
-<p>Submit up to 10 minutes of playing and receive your personalised Practice Desk Report within 5 days.</p>
-<p><strong>You can also tell us what you most want help with.</strong></p>
-</div>
-
-<div class="price">
-<div class="amount">£39</div>
-<small>Introductory price</small>
-<p>
-One recording · up to 10 minutes<br>
-Personalised written report<br>
-Practice priorities + next steps
-</p>
-<a class="btn" style="background:#fff;color:#202020" href="submit.html">Submit your playing</a>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="wrap two">
-
-<div>
-<div class="eyebrow">About</div>
-<h2>Expertise without the scheduling.</h2>
-</div>
-
-<div>
-<p>Practice Desk reviews are provided by a UK-based professional orchestral cellist and international award-winning conservatoire graduate.</p>
-
-<p>The service is designed to give musicians thoughtful, specific feedback without requiring a live lesson — so you can record when it suits you, absorb the feedback in your own time, and return to it throughout your practice.</p>
-</div>
-
-</div>
-</section>
-
-<section class="section faq" id="faq">
-<div class="wrap">
-
-<div class="eyebrow">FAQ</div>
-<h2>Good to know.</h2>
-
-<details>
-<summary>Do I need to be an advanced cellist?</summary>
-<p>Not at all. Practice Desk is for cellists at a wide range of levels. You might be returning to the instrument, preparing for an exam or performance, or simply looking for some expert direction in your practice. Your feedback is tailored to your playing and what you want to achieve.</p>
-</details>
-
-<details>
-<summary>What can I submit?</summary>
-<p>Solo repertoire, orchestral excerpts, audition material, exam pieces or passages you are currently working on.</p>
-</details>
-
-<details>
-<summary>Does this replace my regular teacher?</summary>
-<p>It doesn’t have to. Practice Desk can work as a second professional opinion or focused check-in alongside regular lessons.</p>
-</details>
-
-<details>
-<summary>Will my video be shared publicly?</summary>
-<p>No. Your submission is for assessment only unless you separately give explicit permission for another use.</p>
-</details>
-
-<details>
-<summary>How quickly will I receive my report?</summary>
-<p>Version 1 is planned around delivery within 5 days of a complete submission.</p>
-</details>
-
-</div>
-</section>
-
-<section class="cta wrap">
-<div class="eyebrow">Practice Desk</div>
-<h2>Send your playing.<br>Know what to do next.</h2>
-<a class="btn" href="submit.html">Submit your playing</a>
-</section>
-
+<header class="wrap nav"><a class="brand" href="index.html">PRACTICE DESK</a><a class="back" href="index.html">← Back</a></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">Introductory review · £39</div><h1>Submit your playing.</h1><p class="intro">Tell us a little about your playing and send a link to your recording. You’ll complete payment as the final step.</p></section>
+<div class="info"><strong>Your recording</strong>Up to 10 minutes of cello playing. You can use an unlisted YouTube link, Google Drive, Dropbox or another private link that we can access.</div>
+<form id="practiceForm" action="https://formspree.io/f/xkjwkjzj" method="POST">
+<div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="email">Email address</label><span class="hint">We’ll use this to send your Practice Desk Report.</span><input id="email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="experience">Tell us briefly about your cello playing</label><span class="hint">For example: how long you’ve played, whether you’re returning to the cello, your current level, or anything else that gives us useful context.</span><textarea id="experience" name="playing_background" required></textarea></div>
+<div class="field"><label for="repertoire">What are you playing?</label><span class="hint">Piece, movement, excerpt or passage.</span><input id="repertoire" name="repertoire" type="text" required></div>
+<div class="field"><label for="recording">Recording link</label><span class="hint">Please check that the link works and that viewing permission is enabled.</span><input id="recording" name="recording_link" type="url" placeholder="https://..." required></div>
+<div class="field"><label for="focus">What would you most like help with?</label><span class="hint">This can be specific or broad — for example sound, intonation, technique, phrasing, confidence, or simply what you should prioritise next.</span><textarea id="focus" name="feedback_focus" required></textarea></div>
+<div class="field"><label for="notes">Anything else you’d like us to know?</label><span class="hint">Optional.</span><textarea id="notes" name="additional_notes"></textarea></div>
+<input type="hidden" name="service" value="Practice Desk Introductory Review"><input type="hidden" name="price" value="£39">
+<label class="check"><input type="checkbox" name="privacy_confirmation" value="Agreed" required><span>I confirm that this recording is being submitted for private assessment by Practice Desk and that I have permission to share the material contained in it.</span></label>
+<div class="summary"><div class="eyebrow">Final step</div><div class="price">£39</div><p>Introductory Practice Desk Review</p><p>One recording · up to 10 minutes</p><p>Personalised written report + practice priorities</p></div>
+<button id="submitButton" type="submit">Continue to payment</button>
+<div id="status" class="status">Your submission details will be saved before you are taken to secure payment.</div>
+</form>
 </main>
-
-<footer class="footer">
-<div class="wrap">© 2026 Practice Desk · practicedesksolo.com</div>
-</footer>
-
+<footer class="footer"><div class="wrap">© 2026 Practice Desk · practicedesksolo.com</div></footer>
+<script>
+const form=document.getElementById("practiceForm");const button=document.getElementById("submitButton");const status=document.getElementById("status");
+form.addEventListener("submit",async function(event){event.preventDefault();button.disabled=true;button.textContent="Saving your submission…";status.textContent="Please don’t close this page.";const data=new FormData(form);try{const response=await fetch(form.action,{method:"POST",body:data,headers:{"Accept":"application/json"}});if(response.ok){status.textContent="Submission saved. Taking you to secure payment…";window.location.href="https://buy.stripe.com/cNi14mdq7f590LudFr2Nq00";}else{const result=await response.json().catch(()=>({}));if(response.status===429){throw new Error("The form is temporarily busy. Please wait a little and try again.");}if(result.errors&&result.errors.length){throw new Error(result.errors.map(error=>error.message).join(", "));}throw new Error("We couldn’t save your submission. Please check your details and try again.");}}catch(error){button.disabled=false;button.textContent="Continue to payment";status.textContent=error.message;}});
+</script>
 </body>
 </html>
