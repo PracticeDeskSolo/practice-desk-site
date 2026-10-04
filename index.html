@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Practice Desk — Professional cello feedback</title>
+
+<meta name="description" content="Send your cello playing to professional orchestral cellist Anna Crawford and receive detailed, personalised feedback and a clear plan for what to practise next.">
+
+<style>
+
+:root{
+  --ink:#202020;
+  --paper:#f8f5ef;
+  --white:#fff;
+  --sand:#b59a74;
+  --muted:#68645e;
+  --line:#ddd5ca;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.55;
+}
+
+a{color:inherit}
+
+.wrap{
+  width:min(1080px,90%);
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+.brand{
+  font-size:18px;
+  letter-spacing:.18em;
+  font-weight:600;
+}
+
+.nav a{
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* GENERAL */
+
+.eyebrow{
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:12px;
+  color:var(--sand);
+  font-weight:700;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--ink);
+  color:#fff;
+  text-decoration:none;
+  padding:15px 24px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+.sub{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:13px;
+}
+
+.section{
+  padding:72px 0;
+  border-top:1px solid var(--line);
+}
+
+h2{
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(34px,6vw,54px);
+  margin:0 0 24px;
+}
+
+/* HERO */
+
+.hero{
+  padding:70px 0 88px;
+}
+
+.hero-intro{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:64px;
+  align-items:center;
+}
+
+.hero-copy .logo{
+  width:92px;
+  height:92px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(48px,8vw,82px);
+  line-height:1;
+  margin:18px 0 22px;
+}
+
+.hero-main{
+  font-size:clamp(18px,2.4vw,22px);
+  max-width:650px;
+  margin:0 0 18px;
+  color:var(--muted);
+}
+
+.hero-founder-line{
+  font-size:15px;
+  max-width:620px;
+  margin:0 0 28px;
+}
+
+.founder{
+  text-align:center;
+}
+
+.founder img{
+  width:100%;
+  max-width:340px;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:22px;
+  display:block;
+  margin:0 auto 15px;
+}
+
+.founder-name{
+  font-family:Georgia,serif;
+  font-size:22px;
+  margin-bottom:2px;
+}
+
+.founder-role{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* CARDS */
+
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,.55);
+  border:1px solid var(--line);
+  padding:28px;
+  border-radius:18px;
+}
+
+.num{
+  font-family:Georgia,serif;
+  font-size:32px;
+  color:var(--sand);
+}
+
+.card h3{
+  margin:8px 0;
+}
+
+/* TWO COLUMN SECTIONS */
+
+.two{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:52px;
+  align-items:start;
+}
+
+.checks{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.checks li{
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.checks li:before{
+  content:'✓';
+  color:var(--sand);
+  font-weight:bold;
+  margin-right:10px;
+}
+
+.quote{
+  font-family:Georgia,serif;
+  font-size:28px;
+  max-width:760px;
+}
+
+/* WHO IT'S FOR */
+
+.pill{
+  display:inline-block;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:12px;
+  margin:3px;
+}
+
+/* PRICE */
+
+.price{
+  background:var(--ink);
+  color:#fff;
+  padding:38px;
+  border-radius:22px;
+}
+
+.price .amount{
+  font-family:Georgia,serif;
+  font-size:64px;
+  line-height:1;
+}
+
+.price small{
+  color:#d8d3cb;
+}
+
+/* ABOUT */
+
+.about-founder{
+  font-family:Georgia,serif;
+  font-size:24px;
+  margin-top:0;
+}
+
+/* FAQ */
+
+.faq details{
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+
+.faq summary{
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* FINAL CTA */
+
+.cta{
+  text-align:center;
+  padding:88px 0;
+}
+
+/* FOOTER */
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:28px 0 40px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:720px){
+
+  .grid3,
+  .two,
+  .hero-intro{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:48px 0 64px;
+    text-align:center;
+  }
+
+  .hero-intro{
+    gap:38px;
+  }
+
+  .hero-copy .logo{
+    display:block;
+    margin:0 auto 16px;
+  }
+
+  .hero-main,
+  .hero-founder-line{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .founder img{
+    max-width:270px;
+  }
+
+  .section{
+    padding:54px 0;
+  }
+
+  .nav{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .nav .links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  .nav .links a{
+    margin:0;
+    font-size:13px;
+  }
+
+  .two{
+    gap:28px;
+  }
+
+  .price .amount{
+    font-size:54px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="wrap nav">
+
+  <div class="brand">PRACTICE DESK</div>
+
+  <div class="links">
+    <a href="#how">How it works</a> &nbsp;&nbsp;
+    <a href="#report">Practice Report</a> &nbsp;&nbsp;
+    <a href="about.html">Meet Anna</a> &nbsp;&nbsp;
+    <a href="teachers.html">For teachers</a> &nbsp;&nbsp;
+    <a href="#faq">FAQ</a>
+  </div>
+
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero wrap">
+
+  <div class="hero-intro">
+
+    <div class="hero-copy">
+
+      <img src="logo.png" class="logo" alt="Practice Desk logo">
+
+      <div class="eyebrow">Professional cello feedback, online</div>
+
+      <h1>Practise with direction.</h1>
+
+      <p class="hero-main">
+        Send your playing and receive detailed, personalised feedback,
+        clear priorities and a practical plan for what to work on next.
+      </p>
+
+      <p class="hero-founder-line">
+        Created and run by <strong>Anna Crawford, professional orchestral
+        cellist and Royal College of Music graduate.</strong>
+      </p>
+
+      <a class="btn" href="submit.html">Submit your playing</a>
+
+      <div class="sub">
+        Cello Performance Review · £49 · Delivered within 5 days
+      </div>
+
+    </div>
+
+    <div class="founder">
+
+      <img
+        src="anna-crawford.jpg"
+        alt="Anna Crawford, professional orchestral cellist and founder of Practice Desk"
+      >
+
+      <div class="founder-name">Anna Crawford</div>
+
+      <div class="founder-role">
+        Founder · Professional orchestral cellist
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section" id="how">
+
+  <div class="wrap">
+
+    <div class="eyebrow">How it works</div>
+
+    <h2>A professional second opinion, in three simple steps.</h2>
+
+    <div class="grid3">
+
+      <div class="card">
+
+        <div class="num">01</div>
+
+        <h3>Record</h3>
+
+        <p>
+          Record up to 10 minutes of your cello playing on your phone or camera.
+          It doesn't need to be a perfect take — send the playing you actually
+          want help with.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="num">02</div>
+
+        <h3>Submit</h3>
+
+        <p>
+          Send your recording and tell me what you're working towards,
+          what you're unsure about, or what you'd particularly like another
+          professional pair of ears on.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="num">03</div>
+
+        <h3>Receive</h3>
+
+        <p>
+          Within 5 days, you'll receive a personalised written Practice Report
+          with detailed feedback, clear priorities and practical next steps.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRACTICE REPORT -->
+
+<section class="section" id="report">
+
+  <div class="wrap two">
+
+    <div>
+
+      <div class="eyebrow">Your Practice Report</div>
+
+      <h2>Not just comments. A plan.</h2>
+
+      <p class="quote">
+        Know what is working, what needs attention, and where your practice
+        time will make the biggest difference.
+      </p>
+
+      <p>
+        Your review is built around the recording you send and what you want
+        help with. Rather than forcing every player through the same checklist,
+        I'll focus on the things that matter most in your playing right now.
+      </p>
+
+    </div>
+
+
+    <ul class="checks">
+
+      <li>Overall performance assessment</li>
+
+      <li>Technique, sound and intonation feedback</li>
+
+      <li>Musical and stylistic observations</li>
+
+      <li>3–5 prioritised areas to work on</li>
+
+      <li>Specific practice suggestions and exercises</li>
+
+      <li>A personalised practice plan</li>
+
+      <li>Clear goals for your next recording</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+
+<!-- SECOND OPINION -->
+
+<section class="section">
+
+  <div class="wrap">
+
+    <div class="eyebrow">A fresh perspective</div>
+
+    <h2>Sometimes you just want another pair of ears.</h2>
+
+    <p style="max-width:760px;font-size:18px">
+      Practice Desk isn't designed to replace a regular teacher. It's a way
+      to get focused, independent feedback when you want a fresh perspective
+      on your playing — without needing to arrange another lesson.
+    </p>
+
+    <p style="max-width:760px">
+      You might be preparing for an audition, exam or performance, working
+      through a technical problem, returning to the cello after time away,
+      or simply wondering whether you're focusing on the right things in
+      the practice room.
+    </p>
+
+    <div>
+      <span class="pill">Audition preparation</span>
+      <span class="pill">Orchestral excerpts</span>
+      <span class="pill">Exam &amp; performance prep</span>
+      <span class="pill">Independent learners</span>
+      <span class="pill">Returning cellists</span>
+      <span class="pill">A fresh professional perspective</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRICE -->
+
+<section class="section" id="price">
+
+  <div class="wrap two">
+
+    <div>
+
+      <div class="eyebrow">Cello Performance Review</div>
+
+      <h2>Send your playing. Know what to work on next.</h2>
+
+      <p>
+        Submit up to 10 minutes of playing and receive your personalised
+        Practice Report within 5 days.
+      </p>
+
+      <p>
+        <strong>
+          Tell me what you're working towards or what you most want help with,
+          and I'll make that part of the review.
+        </strong>
+      </p>
+
+    </div>
+
+
+    <div class="price">
+
+      <div class="amount">£49</div>
+
+      <p>
+        One recording · up to 10 minutes<br>
+        Personalised written report<br>
+        Practice priorities + next steps<br>
+        Delivered within 5 days
+      </p>
+
+      <a
+        class="btn"
+        style="background:#fff;color:#202020"
+        href="submit.html"
+      >
+        Submit your playing
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section">
+
+  <div class="wrap two">
+
+    <div>
+
+      <div class="eyebrow">Behind Practice Desk</div>
+
+      <h2>Hi, I'm Anna.</h2>
+
+    </div>
+
+
+    <div>
+
+      <p class="about-founder">
+        I'm a professional orchestral cellist and the founder of Practice Desk.
+      </p>
+
+      <p>
+        I trained at the Royal College of Music and now work professionally
+        as an orchestral cellist in the UK.
+      </p>
+
+      <p>
+        I created Practice Desk because sometimes what you need isn't another
+        full lesson. You need someone new to listen carefully to your playing,
+        tell you what they're hearing, and help you work out what to prioritise
+        next.
+      </p>
+
+      <p>
+        Recording also means you can play when it suits you, choose what you
+        genuinely want feedback on, and return to your report throughout your
+        practice rather than trying to remember everything from a lesson.
+      </p>
+
+      <p>
+        <a href="about.html"><strong>More about Anna →</strong></a>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="section faq" id="faq">
+
+  <div class="wrap">
+
+    <div class="eyebrow">FAQ</div>
+
+    <h2>Good to know.</h2>
+
+
+    <details>
+
+      <summary>Do I need to be an advanced cellist?</summary>
+
+      <p>
+        Not at all. Practice Desk is for cellists at a wide range of levels.
+        You might be returning to the instrument, preparing for an exam,
+        audition or performance, or simply looking for some professional
+        direction in your practice. Your feedback is tailored to your playing
+        and what you want to achieve.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>What can I submit?</summary>
+
+      <p>
+        Solo repertoire, orchestral excerpts, audition material, exam pieces
+        or passages you're currently working on. Your recording can be up to
+        10 minutes long.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Why choose this instead of a live lesson?</summary>
+
+      <p>
+        Practice Desk isn't intended to replace live teaching. Think of it as
+        a professional second opinion: a chance to have your playing assessed
+        independently and receive a written set of priorities you can keep,
+        revisit and work through at your own pace.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Can I use Practice Desk alongside my regular teacher?</summary>
+
+      <p>
+        Absolutely. A Practice Report can be a focused check-in or fresh
+        perspective alongside your regular lessons.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Do I have to play live?</summary>
+
+      <p>
+        No. You record in your own time and submit the playing you want
+        feedback on. There's no live video call or need to perform on demand.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Will my video be shared publicly?</summary>
+
+      <p>
+        No. Your submission is used for your assessment only unless you
+        separately give explicit permission for another use.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>How quickly will I receive my report?</summary>
+
+      <p>
+        You'll receive your personalised Practice Report within 5 days of a
+        complete submission.
+      </p>
+
+    </details>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="cta wrap">
+
+  <div class="eyebrow">Practice Desk</div>
+
+  <h2>
+    A fresh pair of ears.<br>
+    A clearer way forward.
+  </h2>
+
+  <a class="btn" href="submit.html">Submit your playing</a>
+
+  <div class="sub">Cello Performance Review · £49</div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="wrap">
+    © 2026 Practice Desk · practicedesksolo.com
+  </div>
+
+</footer>
+
+</body>
+</html>
